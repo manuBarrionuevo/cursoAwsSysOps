@@ -1,0 +1,6 @@
+LABS ELASTICACHE
+
+https://aws.amazon.com/es/getting-started/hands-on/building-fast-session-caching-with-amazon-elasticache-for-redis/
+https://aws.amazon.com/es/getting-started/hands-on/boosting-mysql-database-performance-with-amazon-elasticache-for-redis/
+https://aws.amazon.com/es/getting-started/hands-on/setting-up-a-redis-cluster-with-amazon-elasticache/
+https://aws.amazon.com/es/elasticache/memcached/wordpress-with-memcached/?nc1=h_ls

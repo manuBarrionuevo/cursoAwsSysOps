@@ -1,0 +1,5 @@
+CONEXION A POSTGRES
+psql --host=postgres.ENDPOINT-DB-POSTGRES --port=5432 --username=postgres --password
+
+RECUPERAR VALOR DEL SECRETO O DATO CONFIDENCIAL
+aws secretsmanager get-secret-value --secret-id postgres-dev-access --region REGION-AQUI

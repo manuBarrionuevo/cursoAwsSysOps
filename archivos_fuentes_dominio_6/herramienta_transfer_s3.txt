@@ -1,0 +1,28 @@
+http://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html
+
+=============================================
+aws configure set default.s3.use_accelerate_endpoint true
+
+==================================================
+aws configure set s3.addressing_style virtual
+
+========================================
+https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html?region="region"&origBucketName=EL-NOMBRE-DE-TU-BUCKET
+
+SUSTITUIR "region" por la Región de AWS que utiliza (por ejemplo, us-west-2)
+
+SUSTITUIR "EL-NOMBRE-DE-TU-BUCKET" por el nombre del bucket que quiere evaluar
+
+========================================
+
+aws configure set default.s3.use_accelerate_endpoint true
+
+aws s3 cp file.txt s3://bucketname/keyname --region region
+
+====================================
+aws configure set s3.addressing_style virtual
+
+aws s3 cp file.txt s3://bucketname/keyname --region region --endpoint-url https://s3-accelerate.amazonaws.com
+
+
+

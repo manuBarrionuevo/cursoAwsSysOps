@@ -1,0 +1,21 @@
+Agregar ruta desde subred pública de VPC-Administrativa a todas las VPC restantes
+
+aws ec2 create-route --route-table-id rtb-XXXXXXXXXXXX --destination-cidr-block 10.0.0.0/8 --transit-gateway-id tgw-XXXXXXXXXXXX
+
+====================================================
+
+Agregar ruta desde VPC-1 a la VPC Administrativa
+
+aws ec2 create-route --route-table-id rtb-XXXXXXXXXXXX--destination-cidr-block 172.16.0.0/16 --transit-gateway-id tgw-XXXXXXXXXXXX
+
+====================================================
+
+Agregar ruta desde VPC-2 a la VPC Administrativa
+
+aws ec2 create-route --route-table-id rtb-XXXXXXXXXXXX--destination-cidr-block 172.16.0.0/16 --transit-gateway-id tgw-XXXXXXXXXXXX
+
+====================================================
+
+Agregar ruta desde VPC-3 a la VPC Administrativa
+
+aws ec2 create-route --route-table-id rtb-XXXXXXXXXXXX--destination-cidr-block 172.16.0.0/16 --transit-gateway-id tgw-XXXXXXXXXXXX

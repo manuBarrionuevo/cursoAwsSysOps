@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:GenerateDataKey",
+                "kms:ReEncryptTo",
+                "kms:GenerateDataKeyWithoutPlaintext",
+                "kms:DescribeKey",
+                "kms:GenerateDataKeyPairWithoutPlaintext",
+                "kms:GenerateDataKeyPair",
+                "kms:ReEncryptFrom"
+            ],
+            "Resource": "arn:aws:kms:us-west-2:YOUR_ACCOUNT_NUMBER:key/YOUR_KEY_IDENTIFIER"
+        }
+    ]
+}

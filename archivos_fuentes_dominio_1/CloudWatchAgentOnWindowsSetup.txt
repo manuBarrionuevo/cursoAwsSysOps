@@ -1,0 +1,26 @@
+1. Instalar CloudWatch Agent
+
+https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-cloudwatch-agent.msi
+
+2. Verificar Instalacion
+
+Get-Service -name "AmazonCloudWatchAgent"
+
+3. Ejecutar el asistente de configuracion
+
+Invoke-Item "C:\Program Files\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent-config-wizard.exe"
+
+4. Establecer ruta
+
+Set-Location -Path "C:\Program Files\Amazon\AmazonCloudWatchAgent"
+
+5. Ejecutar servicio
+
+.\amazon-cloudwatch-agent-ctl.ps1 -a fetch-config -m EC2 -c file:"C:\Program Files\Amazon\AmazonCloudWatchAgent\config.json" -s
+
+6. Verificar el estatus del servicio
+
+Get-Service -name "AmazonCloudWatchAgent"
+
+
+

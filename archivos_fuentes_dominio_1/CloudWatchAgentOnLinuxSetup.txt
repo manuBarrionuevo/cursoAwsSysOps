@@ -1,0 +1,24 @@
+1. Instalar
+
+sudo yum install amazon-cloudwatch-agent
+
+2. Configurar Credenciales
+
+sudo aws configure
+
+3. Comenzar con el asistente de configuracion
+
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+
+4. Creaar el archivo types.db 
+
+sudo mkdir -p /usr/share/collectd/
+sudo touch /usr/share/collectd/types.db
+
+5. Ejecutar el servicio
+
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c ssm:AmazonCloudWatch-linux -s
+
+6. Verificar el servicio (Status)
+
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status

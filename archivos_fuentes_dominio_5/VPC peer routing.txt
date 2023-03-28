@@ -1,0 +1,14 @@
+# Agregar ruta desde subred privada de Canada-Dev a subred privada Paris
+
+aws ec2 create-route --route-table-id rtb-XXXXXXXXXXXXXX --destination-cidr-block 192.168.2.0/24 --vpc-peering-connection-id pcx-XXXXXXXXXXXXXXXXXX
+
+
+# Agregar ruta desde subred publica de Canada-Dev a subred privada Paris
+
+aws ec2 create-route --route-table-id rtb-XXXXXXXXXXXXXX --destination-cidr-block 192.168.2.0/24 --vpc-peering-connection-id pcx-XXXXXXXXXXXXXXXXXX
+
+
+Habilitar tráfico SSH e ICMP desde subred privada Paris
+aws ec2 authorize-security-group-ingress --group-id sg-XXXXXXXXXXXXXX --protocol tcp --port 22 --cidr 192.168.2.0/24
+
+aws ec2 authorize-security-group-ingress --group-id sg-XXXXXXXXXXXXXX - SSH-ICMP --protocol icmp --port 1 --cidr 192.168.2.0/24

@@ -1,0 +1,4 @@
+while :
+do
+curl -iL URL-CLOUDFRONT
+done

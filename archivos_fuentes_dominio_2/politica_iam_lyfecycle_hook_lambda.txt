@@ -1,0 +1,12 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "autoscaling:CompleteLifecycleAction"
+      ],
+      "Resource": "arn:aws:autoscaling:*:ID-CUENTA:autoScalingGroup:*:autoScalingGroupName/NOMBRE"
+    }
+  ]
+}

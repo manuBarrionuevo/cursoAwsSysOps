@@ -1,0 +1,17 @@
+while :
+do
+curl -iL URL-CLOUDFRONT 2>&1 >> ~/curl.log
+done
+
+========================================
+
+while :; do curl URL-CLOUDFRONT; 2>&1 >> ~/curl.log; done
+
+
+
+
+
+
+
+
+
